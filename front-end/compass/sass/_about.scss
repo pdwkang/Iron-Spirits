@@ -1,0 +1,93 @@
+.about-header-wrapper{
+	// background-image: url('../../src/about/images/about-bacgroundcopy.jpg');
+	// background-position: center;
+	// background-size: width(100%);
+	
+	// overflow: hidden;
+}
+
+.about-header{
+	// background-color: rgba(255,255,255,0.7);
+	// background-color: rgba(0,111,186,.5);
+	// background-color: rgba(255,178,50,.5);
+	.about-header-text{
+		color: black;
+		// color: white;
+		padding:50px 0;
+		width: 86%;
+		margin-left: 7%;
+		font-size: 18px;
+		line-height: 32px;
+		letter-spacing: .7px;		
+	}
+}
+
+//----------------//
+//------About-----//
+//----------------//
+.about-body-header{
+	width: 100%;
+	height: 90px;
+	line-height: 90px;
+	font-family: 'Archivo Black';
+	font-size: 25px;
+	text-align: center;
+	font-weight: 900;
+	background-color: #FFB52C;
+	// opacity: .83;
+	color: white;
+	margin-bottom: 70px;
+}
+.about-body-col-header{
+	font-family: 'Archivo Black';
+	font-size: 16px;
+	color: orange;
+	margin-bottom: 7px;
+}
+.about-body-col-description{
+	font-size: 14px;
+	margin-bottom: 30px;
+	font-weight: 500;
+	color: black;
+}
+.about-body-col-left{
+	padding:15px;
+	padding-top: 50px;
+	width:32%;
+	// display: inline-block;
+	float: left;
+}
+.about-body-col-right{
+	padding:15px;
+	padding-top: 0;
+	width:32%;
+	// display: inline-block;
+	float: left;
+}
+.about-body-col-image{
+	width:36%;
+	float: left;
+	img{
+	width:100%;
+	}
+}
+
+// .offering-body{
+// 	background-color: $body-element-color;
+// 	padding-top:20px;
+// 	color:white;
+// }
+// .each-offering-wrapper{
+// 	width: 88%;
+// 	margin-left: 6%;
+// }
+// .each-offering{
+// 	text-align: center;
+// 	font-size: 22px;
+// 	font-family: 'Teko';
+// 	height:120px;
+// 	line-height: 120px;
+// 	font-weight: 900;
+// 	letter-spacing: 1px;
+// }
+
