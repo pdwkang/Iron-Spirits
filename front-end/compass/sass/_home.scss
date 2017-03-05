@@ -94,7 +94,9 @@ $body-element-color: darkorange;
 		display: inline-block;
 		text-align: center;
 		width: 150px;
-
+		.active{
+			color:darkorange;
+		}
 	}	
 	.ironspirits-logo{
 		display: inline-block;
@@ -105,8 +107,8 @@ $body-element-color: darkorange;
 		img{
 			position: absolute;
 			padding:10px;
-			height:75px;
-			width:75px;
+			height:83px;
+			width:83px;
 			left:0;
 			right:0;
 			margin:auto;
@@ -137,7 +139,8 @@ $body-element-color: darkorange;
 //----------------//
 .faded-carousel-image{
 	// filter: blur(2px)
-	filter:brightness(60%)
+	filter:brightness(60%);
+	max-width: 100%;
 }
 .faded-carousel-image:hover{
 	// filter:blur(0);
@@ -404,7 +407,23 @@ $body-element-color: darkorange;
 	background-size: contain;
 	opacity: .05;    
 }
-
+@media (max-width: 450px) {
+	.specialty-header{
+		font-size:20px;
+		height:60px;
+		line-height: 60px;
+	}
+	.offering-header{
+		font-size:20px;
+		height:60px;
+		line-height: 60px;	
+	}		
+	.difference-header{
+		font-size:20px;
+		height:60px;
+		line-height: 60px;	
+	}
+}	
 .difference-header{
 	width: 100%;
 	height:90px;
@@ -487,4 +506,18 @@ $body-element-color: darkorange;
 	bottom:5px;
 	width:88%;
 	color: rgb(240,240,240)
+}
+
+
+
+
+
+
+
+.hide-or-not{
+	display: none;
+}
+
+.dont-hide{
+	display: block;
 }

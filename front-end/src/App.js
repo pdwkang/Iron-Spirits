@@ -15,7 +15,7 @@ class IronSpiritsNavBar extends React.Component {
                         <Navbar.Collapse>
                             <Nav pullRight>
                                 <NavItem href="/">
-                                    <Link to="/">Home</Link>
+                                    <IndexLink to="/">Home</IndexLink>
                                 </NavItem>
                                 <NavItem href="/about">
                                     <Link to="about">About Us</Link>
@@ -32,11 +32,11 @@ class IronSpiritsNavBar extends React.Component {
                 </div>       
                 <div className='navbar-wrapper hidden-xs'>
                     <div className='navbar-inside-wrapper'>
-                        <div className='each-nav-item'><IndexLink to="/">Home</IndexLink></div>
+                        <div className='each-nav-item'><IndexLink activeClassName='active' to="/">Home</IndexLink></div>
                         <div className='each-nav-item'><Link activeClassName='active' to="about">About Us</Link></div>
                         <div className='ironspirits-logo'>
                             <div className='logo-tilt'></div>
-                            <Link to="/"><img src={require('../public/logo.png')} alt=' '/></Link>
+                            <IndexLink to="/"><img src={require('../public/logo.png')} alt=' '/></IndexLink>
                         </div>
                         <div className='each-nav-item'><Link activeClassName='active' to="portfolio">Portfolio</Link></div>
                         <div className='each-nav-item'><Link activeClassName='active' to="contact">Contact Us</Link></div>

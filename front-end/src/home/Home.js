@@ -2,13 +2,23 @@ import React, { Component } from 'react';
 var Carousel = require('nuka-carousel');
 
 class HomeCarousel extends Component{
+	constructor(props) {
+		super(props);
+		this.resize = this.resize.bind(this);
+	}
+	resize(){
+		window.dispatchEvent(new Event('resize'));	
+	}
 	render(){
 		return(
-			<Carousel autoplay={true}>
-		        <img className='faded-carousel-image' src={require('./images/image.jpeg')} alt=' '/>
-		        <img className='faded-carousel-image' src={require('./images/imag2.jpeg')} alt=' '/>
-		        <img className='faded-carousel-image' src={require('./images/image.jpeg')} alt=' '/>
-  			</Carousel>
+			<div className='carousel-and-text'>
+				<Carousel autoplay='true'>
+			        <img className='faded-carousel-image' onLoad={this.resize}  src={require('./images/image.jpeg')} alt=' '/>
+			        <img className='faded-carousel-image' onLoad={this.resize}  src={require('./images/imag2.jpeg')} alt=' '/>
+			        <img className='faded-carousel-image' onLoad={this.resize}  src={require('./images/image.jpeg')} alt=' '/>
+	  			</Carousel>
+  				<CarouselText />
+  			</div>
 		)
 	}
 }
@@ -196,14 +206,11 @@ class IronFooter extends Component{
 }
 
 
-const Home = React.createClass({
-	render() {
+class Home extends Component{
+	render(){
     	return (
     		<div>
-    			<div className='carousel-and-text'>
-      				<HomeCarousel />
-      				<CarouselText />
-      			</div>
+      			<HomeCarousel />
       			<ProductOffering />
       			<Specialty />
       			<Difference />
@@ -211,6 +218,7 @@ const Home = React.createClass({
       		</div>
 		)
   	}
-});
+};
 
 export default Home
+
