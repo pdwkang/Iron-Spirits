@@ -11,7 +11,7 @@ $body-element-color: darkorange;
 .navbar{
 	margin-bottom: 0;
 	margin-top:-60px;
-	font-family: 'Quantico';
+
 	a{
 		position: relative;
 		a{
@@ -35,7 +35,7 @@ $body-element-color: darkorange;
 	font-size: 17px;
 	// letter-spacing: -0.1px;
 	// font-weight: 900;
-	font-family: 'Quantico';
+	// font-family: 'Quantico';
 	// border-bottom: 2.5px solid rgba(0,0,0,0.1);
 	a{
 		// color: black;
@@ -62,11 +62,11 @@ $body-element-color: darkorange;
 	height:60px;
 	line-height: 60px;
 	background-color: white;
-	font-size: 17px;
 	letter-spacing: -0.1px;
-	// font-weight: 900;
-	font-family: 'Quantico';
 	border-bottom: 2.5px solid rgba(0,0,0,0.1);
+	font-family: 'Montserrat';
+	font-size: 17px;
+	font-weight: 400;	
 	a{
 		color: black;
 		text-decoration: none;
@@ -507,12 +507,6 @@ $body-element-color: darkorange;
 	width:88%;
 	color: rgb(240,240,240)
 }
-
-
-
-
-
-
 
 .hide-or-not{
 	display: none;

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import { hashHistory } from 'react-router';
+import MyGoogleMap from './GoogleMap.js'
+import IronFooter from '../IronFooter.js'
 
 
 
@@ -8,7 +10,7 @@ class Contact extends Component {
 	handleContact(event){
 		event.preventDefault();
 		$.ajax({
-			url: 'http://pauldkang.com:3000/send/email',
+			url: 'http://pauldkang.com:3001/send/email',
 			headers: {
 				'Content-Type':'application/x-www-form-urlencoded'
 			},
@@ -28,18 +30,20 @@ class Contact extends Component {
 	render() {
 		return (
 			<div className="qwqweqweqweqwe" >
+				<MyGoogleMap/>
 				<div className="title">
-					<h1>Contact Us!</h1>
 				</div>
 				<div className="someclassssss">
 					<h2>Send a message</h2>
 					<form onSubmit={this.handleContact}>
-						<input className="textbox" type="text" placeholder="Your Name"/><br/>
+						<input className="textbox" type="text" placeholder="Name"/><br/>
 						<input className="textbox" type="email" placeholder="Email" /><br/>
-						<textarea className="textarea" type="text-area" placeholder="Your Message"></textarea><br/>
+						<textarea className="textarea" type="text-area" placeholder="Message"></textarea><br/>
 						<input className="submit-btn" type="submit" value="Submit"/>
 					</form>
 				</div>
+				
+				<IronFooter />
 			</div>
 		)
 	}

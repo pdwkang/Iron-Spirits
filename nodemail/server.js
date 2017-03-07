@@ -13,7 +13,7 @@ var config 		= require('./config/config.js');
 // =================================================================
 // configuration ===================================================
 // =================================================================
-var port = process.env.PORT || 3000; // used to create, sign, and verify tokens
+var port = process.env.PORT || 3001; // used to create, sign, and verify tokens
 // use body parser so we can get info from POST and/or URL parameters
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

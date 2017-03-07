@@ -2,7 +2,6 @@
 .navbar {
   margin-bottom: 0;
   margin-top: -60px;
-  font-family: 'Quantico';
 }
 /* line 15, ../../compass/sass/_home.scss */
 .navbar a {
@@ -22,7 +21,6 @@
   margin-bottom: 0;
   border-radius: 0;
   font-size: 17px;
-  font-family: 'Quantico';
 }
 /* line 40, ../../compass/sass/_home.scss */
 .navbar-wrapper-xs a {
@@ -51,10 +49,11 @@
   height: 60px;
   line-height: 60px;
   background-color: white;
-  font-size: 17px;
   letter-spacing: -0.1px;
-  font-family: 'Quantico';
   border-bottom: 2.5px solid rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat';
+  font-size: 17px;
+  font-weight: 400;
 }
 /* line 70, ../../compass/sass/_home.scss */
 .navbar-wrapper a {
@@ -507,12 +506,12 @@
   color: #f0f0f0;
 }
 
-/* line 517, ../../compass/sass/_home.scss */
+/* line 511, ../../compass/sass/_home.scss */
 .hide-or-not {
   display: none;
 }
 
-/* line 521, ../../compass/sass/_home.scss */
+/* line 515, ../../compass/sass/_home.scss */
 .dont-hide {
   display: block;
 }
