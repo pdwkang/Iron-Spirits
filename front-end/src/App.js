@@ -17,14 +17,26 @@ class IronSpiritsNavBar extends React.Component {
                                 <NavItem href="/">
                                     <IndexLink to="/">Home</IndexLink>
                                 </NavItem>
-                                <NavItem href="/about">
-                                    <Link to="about">About Us</Link>
+                                <NavItem href="/">
+                                    <Link to="about">About</Link>
                                 </NavItem>
                                 <NavItem href="/">
-                                    <Link to="portfolio">Portfolio</Link>
+                                    <IndexLink to="services">Services</IndexLink>
+                                </NavItem>
+                                <NavItem href="/">
+                                    <Link to="process">Process</Link>
+                                </NavItem>                                
+                                <NavItem href="/">
+                                    <IndexLink to="gallery">Gallery</IndexLink>
+                                </NavItem>
+                                <NavItem href="/">
+                                    <IndexLink to="onlineshop">Shop</IndexLink>
+                                </NavItem>                                                                
+                                <NavItem href="/">
+                                    <IndexLink to="blog">Blog</IndexLink>
                                 </NavItem>                          
                                 <NavItem ref="/">
-                                    <Link to="contact">Contact Us</Link>
+                                    <Link to="contact">Contact</Link>
                                 </NavItem>
                             </Nav>
                         </Navbar.Collapse>
@@ -32,14 +44,19 @@ class IronSpiritsNavBar extends React.Component {
                 </div>       
                 <div className='navbar-wrapper hidden-xs'>
                     <div className='navbar-inside-wrapper'>
-                        <div className='each-nav-item'><IndexLink activeClassName='active' to="/">Home</IndexLink></div>
-                        <div className='each-nav-item'><Link activeClassName='active' to="about">About Us</Link></div>
+                        <div className='each-nav-item'><Link activeClassName='active' to="about">About</Link></div>
+                        <div className='each-nav-item'><Link activeClassName='active' to="services">Services</Link></div>
+                        <div className='each-nav-item'><Link activeClassName='active' to="process">Process</Link></div>
+                        <div className='each-nav-item'><Link activeClassName='active' to="gallery">Gallery</Link></div>                        
                         <div className='ironspirits-logo'>
                             <div className='logo-tilt'></div>
                             <IndexLink to="/"><img src={require('../public/logo.png')} alt=' '/></IndexLink>
                         </div>
-                        <div className='each-nav-item'><Link activeClassName='active' to="portfolio">Portfolio</Link></div>
-                        <div className='each-nav-item'><Link activeClassName='active' to="contact">Contact Us</Link></div>
+
+                        <div className='each-nav-item'><Link activeClassName='active' to="onlineshop">Shop</Link></div>
+                        <div className='each-nav-item'><Link activeClassName='active' to="blog">Blog</Link></div>
+                        <div className='each-nav-item'><Link activeClassName='active' to="contact">Contact</Link></div>
+                        <div className='each-nav-item' style={{color:'black'}}>Search</div>                        
                     </div>
                 </div>   
             </div>             

@@ -32,7 +32,7 @@ $body-element-color: darkorange;
 	// height:60px;
 	// line-height: 60px;
 	// background-color: white;
-	font-size: 17px;
+	font-size: 14px;
 	// letter-spacing: -0.1px;
 	// font-weight: 900;
 	// font-family: 'Quantico';
@@ -65,7 +65,7 @@ $body-element-color: darkorange;
 	letter-spacing: -0.1px;
 	border-bottom: 2.5px solid rgba(0,0,0,0.1);
 	font-family: 'Montserrat';
-	font-size: 17px;
+	font-size: 14px;
 	font-weight: 400;	
 	a{
 		color: black;
@@ -89,18 +89,19 @@ $body-element-color: darkorange;
 .navbar-inside-wrapper{
 	position: relative;
 	margin:auto; 
-	width:750px;
+	width:95%;
+	// margin-left: 2.5%;
 	.each-nav-item{
 		display: inline-block;
 		text-align: center;
-		width: 150px;
+		width: 11% ;
 		.active{
 			color:darkorange;
 		}
 	}	
 	.ironspirits-logo{
 		display: inline-block;
-		width:150px;
+		width:12%;
 		position: relative;
 		text-align: center;
 	

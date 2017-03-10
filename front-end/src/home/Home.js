@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import IronFooter from '../IronFooter.js'
+import $ from 'jquery';
+import { hashHistory } from 'react-router';
 
 var Carousel = require('nuka-carousel');
 
@@ -12,9 +14,10 @@ class HomeCarousel extends Component{
 		window.dispatchEvent(new Event('resize'));	
 	}
 	render(){
+		var autoplay = true
 		return(
 			<div className='carousel-and-text'>
-				<Carousel autoplay='true'>
+				<Carousel autoplay={autoplay}>
 			        <img className='faded-carousel-image' onLoad={this.resize}  src={require('./images/image.jpeg')} alt=' '/>
 			        <img className='faded-carousel-image' onLoad={this.resize}  src={require('./images/imag2.jpeg')} alt=' '/>
 			        <img className='faded-carousel-image' onLoad={this.resize}  src={require('./images/image.jpeg')} alt=' '/>
@@ -48,47 +51,97 @@ class ProductOffering extends Component{
 				<div className='offering-header'>Our Product Offerings</div>
 				<div className='offering-body'>
 					<div className='each-offering-wrapper'>
-						<div className='each-offering col-md-3 col-sm-4 col-xs-6'>
+						<div className='each-offering col-md-4 col-sm-4 col-xs-6'>
 							<img className='each-icon-offering' src={require('./images/orange-icon-example.png')} alt=' '/>
 							<br/>
 							THEMED ENIVRONMENTS
 						</div>
-						<div className='each-offering col-md-3 col-sm-4 col-xs-6'>
+						<div className='each-offering col-md-4 col-sm-4 col-xs-6'>
 							<img className='each-icon-offering' src={require('./images/orange-icon-example.png')} alt=' '/>
 							<br/>
 							MURALS</div>
-						<div className='each-offering col-md-3 col-sm-4 col-xs-6'>
+						<div className='each-offering col-md-4 col-sm-4 col-xs-6'>
 							<img className='each-icon-offering' src={require('./images/orange-icon-example.png')} alt=' '/>
 							<br/>
 							ARCHITECTURAL SIGNAGE</div>
 						
-						<div className='each-offering col-md-3 col-sm-4 col-xs-6'>
+						<div className='each-offering col-md-4 col-sm-4 col-xs-6'>
 							<img className='each-icon-offering' src={require('./images/orange-icon-example.png')} alt=' '/>
 							<br/>
 							CUSTOM PROPS & SETS</div>
-						<div className='each-offering col-md-3 col-sm-4 col-xs-6'>
+						<div className='each-offering col-md-4 col-sm-4 col-xs-6'>
 							<img className='each-icon-offering' src={require('./images/orange-icon-example.png')} alt=' '/>
 							<br/>
 							CUSTOME FIXTURES</div>
-						<div className='each-offering col-md-3 col-sm-4 col-xs-6'>
+						<div className='each-offering col-md-4 col-sm-4 col-xs-6'>
 							<img className='each-icon-offering' src={require('./images/orange-icon-example.png')} alt=' '/>
 							<br/>
 							2D AND 3D SCULPTURE</div>
-						<div className='each-offering col-md-3 col-sm-4 col-xs-6'>
+						<div className='each-offering col-md-4 col-sm-4 col-xs-6'>
 							<img className='each-icon-offering' src={require('./images/orange-icon-example.png')} alt=' '/>
 							<br/>
 							ILLUSTRATION & DESIGN</div>
-						<div className='each-offering col-md-3 col-sm-4 col-xs-6'>
+						<div className='each-offering col-md-4 col-sm-4 col-xs-6'>
 							<img className='each-icon-offering' src={require('./images/orange-icon-example.png')} alt=' '/>
 							<br/>
 							DIGITAL MEDIA</div>
-						<div className='each-offering col-md-3 col-sm-4 col-xs-6'>
+						<div className='each-offering col-md-4 col-sm-4 col-xs-6'>
 							<img className='each-icon-offering' src={require('./images/orange-icon-example.png')} alt=' '/>
 							<br/>
 							INTERACTIVE ELEMENTS</div>
 					</div>
 					<div className='after-bootstrap-placeholder'>&nbsp;</div>
 				</div>
+			</div>
+		)
+	}
+}
+
+class Video extends Component{
+	render(){
+		return(
+			<div style={{width:'75%', margin:'auto'}}>
+				<video src={require('./test.mp4')} type='video/mp4' controls autoplay loop id="theVid" width='100%'/>
+			</div>
+		)
+	}
+}
+
+class SocialMedia extends Component{
+	render(){
+		return(
+			<div style={{textAlign:'center'}}>
+				<hr/>
+				<h1>social media links</h1>
+					<IronFooter />
+			</div>
+		)
+	}
+}
+
+class RecentProjects extends Component{
+	render(){
+		return(
+			<div style={{height:300, textAlign:'center'}}>
+				<hr/>
+				<h1>Recent Projects</h1>
+			</div>
+		)
+	}
+}
+
+class Clients extends Component{
+	render(){
+		return(
+			<div style={{textAlign:'center'}}>
+				<hr/>
+				<h1> Clients </h1>
+				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
+				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
+				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
+				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
+				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
+				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
 			</div>
 		)
 	}
@@ -178,7 +231,47 @@ class Difference extends Component{
 	}
 }
 
+class ContactForm extends Component {
+	handleContact(event){
+		event.preventDefault();
+		$.ajax({
+			url: 'http://pauldkang.com:3001/send/email',
+			headers: {
+				'Content-Type':'application/x-www-form-urlencoded'
+			},
+			method: 'POST',
+			crossDomain: 'true',
+			dataType: 'json',
+			data: {'name': event.target[0].value,'email':event.target[1].value, 'message': event.target[2].value},
+			success: (data)=>{
+				hashHistory.push({pathname:'/',query:'1',state:{thanksSent:true}});
+				console.log(this)
+			}
+		}).fail(function(jqXhr) {
+			console.log('failed');
+		});
+	}
 
+	render() {
+		return (
+			<div className="qwqweqweqweqwe" style={{textAlign:'center'}}>
+
+				<div className="title">
+				</div>
+				<div className="someclassssss" style={{marginTop:150}}>
+					<h1>Send a message</h1>
+					<form onSubmit={this.handleContact}>
+						<input className="textbox" type="text" placeholder="Name"/><br/>
+						<input className="textbox" type="email" placeholder="Email" /><br/>
+						<textarea className="textarea" type="text-area" placeholder="Message"></textarea><br/>
+						<input className="submit-btn" type="submit" value="Submit"/>
+					</form>
+				</div>
+				
+			</div>
+		)
+	}
+}
 
 class Home extends Component{
 	render(){
@@ -186,9 +279,13 @@ class Home extends Component{
     		<div>
       			<HomeCarousel />
       			<ProductOffering />
-      			<Specialty />
-      			<Difference />
-      			<IronFooter />
+      			<Video/>
+      			<SocialMedia/>
+      			<RecentProjects/>
+      			<Clients/>
+      			
+      			<ContactForm/>
+      		
       		</div>
 		)
   	}
@@ -196,3 +293,5 @@ class Home extends Component{
 
 export default Home
 
+// <Specialty />
+// <Difference />

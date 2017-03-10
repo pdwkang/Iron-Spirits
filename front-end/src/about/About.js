@@ -19,6 +19,47 @@ class AboutHeader extends Component{
 	}
 }
 
+class OurTeam extends Component{
+	render(){
+		return(
+			<div style={{width:'80%',margin:'auto'}}>
+				<h1>Our Team</h1>
+				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
+				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
+				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
+				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
+				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
+				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
+				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
+				<div className='col-sm-3' style={{marginBottom:100}}><img src={require('./images/face.jpg')}/><br/><h5>Title and Name</h5></div>
+				<div>&nbsp;</div>
+			</div>
+		)
+	}
+}
+
+class Testimonials extends Component{
+	render(){
+		return(
+			<div style={{width:'80%',margin:'auto', height:300, marginBottom:100, backgroundColor:'blue', color:'white'}}>
+				<h1>Testimonials</h1>
+				
+			</div>
+		)
+	}
+}
+
+class FAQ extends Component{
+	render(){
+		return(
+			<div style={{width:'80%',margin:'auto', height:300, backgroundColor:'green'}}>
+				<h1>FAQ</h1>
+				
+			</div>
+		)
+	}
+}
+
 class AboutBody extends Component{
 	render(){
 		return(
@@ -95,11 +136,15 @@ class IronFooter extends Component{
 export default class About extends Component {
 	render(){
 		return(
-			<div style={{width:'100vw'}}>
+			<div style={{width:'100vw', textAlign:'center'}}>
 				<AboutHeader/>
-				<AboutBody/>
-				<IronFooter/>
+				<OurTeam/>		
+				<Testimonials/>		
+				<FAQ/>		
 			</div>
 		)
 	}
 }
+
+// <AboutBody/>
+// <IronFooter/>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
 	withGoogleMap,
 	GoogleMap,
-	InfoWindow,
+	// InfoWindow,
 	Marker,
 } from 'react-google-maps';
 
@@ -12,7 +12,7 @@ const InitialMap = withGoogleMap(props =>{
 			ref={props.onMapLoad}
 			defaultZoom={12}
 			defaultCenter={{'lat':34.1660086, 'lng': -84.1851828}}
-			onClick = {props.onMapClick}
+			onClick={props.onMapClick}
 		
 		>
         <Marker
@@ -41,10 +41,10 @@ export default class MyGoogleMap extends Component{
 		return(
 			<div style={{marginLeft:'50vw',height:'50vw', width:'50vw'}} >
 				<InitialMap
-					containerElement = {
+					containerElement={
 						<div style={{height:'100%'}}/>
 					}
-					mapElement = {
+					mapElement={
 						<div style={{height:'100%'}}/>
 					}		
 					
