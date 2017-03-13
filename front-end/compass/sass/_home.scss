@@ -89,19 +89,19 @@ $body-element-color: darkorange;
 .navbar-inside-wrapper{
 	position: relative;
 	margin:auto; 
-	width:95%;
-	// margin-left: 2.5%;
+	width:70%;
+	// margin-left: 24%;
 	.each-nav-item{
 		display: inline-block;
 		text-align: center;
-		width: 11% ;
+		width: 17% ;
 		.active{
 			color:darkorange;
 		}
 	}	
 	.ironspirits-logo{
 		display: inline-block;
-		width:12%;
+		width:32%;
 		position: relative;
 		text-align: center;
 	
@@ -147,6 +147,24 @@ $body-element-color: darkorange;
 	// filter:blur(0);
 	// transition: filter .3s;
 }
+section .react-simple-parallax-bg{
+	background-color: blue;
+	height: 500px;
+}
+section .parallax{
+	top:100px;
+	margin:auto;
+}
+.each-carousel-text{
+	position: absolute;
+	// display: flex;
+	top:15vw;
+	text-align: center;
+	width:100%;
+	h1{
+		color: white;
+	}
+}
 // $special-height: '100vw' / 1.7777;
 .carousel-and-text{
 	position: relative;
@@ -181,7 +199,7 @@ $body-element-color: darkorange;
 				color: white;
 				font-family: "Calligraffitti";
 				letter-spacing: 1.5px;
-				text-shadow: 1.2px 1.2px black;
+				// text-shadow: 1.2px 1.2px black;
 				
 			}
 		}
@@ -216,7 +234,7 @@ $body-element-color: darkorange;
 				color: white;
 				font-family: "Calligraffitti";
 				letter-spacing: 1px;
-				 text-shadow: 1.2px 1.2px black;
+				 // text-shadow: 1.2px 1.2px black;
 			}
 		}
 	}    
@@ -249,7 +267,7 @@ $body-element-color: darkorange;
 				color: white;
 				font-family: "Calligraffitti";
 				letter-spacing: 1px;
-				 text-shadow: 1.2px 1.2px black;
+				 // text-shadow: 1.2px 1.2px black;
 			}
 		}
 	}       
@@ -283,7 +301,7 @@ $body-element-color: darkorange;
 				color: white;
 				font-family: "Calligraffitti";
 				letter-spacing: 1px;
-				text-shadow: 1.3px 1.3px black;
+				// text-shadow: 1.3px 1.3px black;
 			}
 		}
 	}        

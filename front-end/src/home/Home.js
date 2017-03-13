@@ -2,8 +2,21 @@ import React, { Component } from 'react';
 import IronFooter from '../IronFooter.js'
 import $ from 'jquery';
 import { hashHistory } from 'react-router';
+import Parallax from 'react-simple-parallax';
+import WhatWeDo from './WhatWeDo.js'
+import Philosophy from './Philosophy.js'
+import Clients from './Clients.js'
+import ContactForm from './Contact.js'
+
 
 var Carousel = require('nuka-carousel');
+var carouselImages = [
+	require('./images/carousel1.jpg'),
+	require('./images/carousel2.jpg'),
+	require('./images/carousel3.jpg'),
+	require('./images/carousel4.jpg')
+]
+
 
 class HomeCarousel extends Component{
 	constructor(props) {
@@ -17,11 +30,35 @@ class HomeCarousel extends Component{
 		var autoplay = true
 		return(
 			<div className='carousel-and-text'>
+				{/*<div style={{width: '80%', margin:'auto', marginTop: 20}}>*/}
+				<div style={{maxHeight:'40vw', overflow:'hidden'}}>
 				<Carousel autoplay={autoplay}>
-			        <img className='faded-carousel-image' onLoad={this.resize}  src={require('./images/image.jpeg')} alt=' '/>
-			        <img className='faded-carousel-image' onLoad={this.resize}  src={require('./images/imag2.jpeg')} alt=' '/>
-			        <img className='faded-carousel-image' onLoad={this.resize}  src={require('./images/image.jpeg')} alt=' '/>
+			        <div>
+			        	<img className='faded-carousel-image' onLoad={this.resize}  src={carouselImages[0]} alt=' '/>
+						<div className='each-carousel-text'>
+							<h1>Themed Environments</h1>
+						</div>			        
+			        </div>
+			        <div>
+			        	<img style={{width:'100%'}} className='faded-carousel-image' onLoad={this.resize}  src={carouselImages[1]} alt=' '/>
+			        	<div className='each-carousel-text'>
+			        		<h1>Signage</h1>
+			        	</div>
+			        </div>
+			        <div>
+			        	<img className='faded-carousel-image' onLoad={this.resize}  src={carouselImages[2]} alt=' '/>
+			        	<div className='each-carousel-text'>
+			        		<h1>2D and 3D Sculpture</h1>
+			        	</div>
+			        </div>
+			        <div>
+			        	<img className='faded-carousel-image' onLoad={this.resize}  src={carouselImages[3]} alt=' '/>
+			        	<div className='each-carousel-text'>
+			        		<h1>Murals</h1>
+			        	</div>
+			        </div>
 	  			</Carousel>
+	  			</div>
   				<CarouselText />
   			</div>
 		)
@@ -32,23 +69,23 @@ class CarouselText extends Component{
 	render(){
 		return(
 			<div className='carousel-text-wrapper'>
-				<div className='carousel-text-header'>
-					IRON SPIRITS
-				</div>
-				<div className='carousel-text-body'>
-					<div className='carousel-slogan'>Inspired Creative</div>
-					<div className='carousel-quote'>"Creating innovative and beautiful spaces<br/> with quality craftsmanship"</div>
-				</div>
+
 			</div>
 		)
 	}
 }
-
+				// <div className='carousel-text-header'>
+				// 	IRON SPIRITS
+				// </div>
+				// <div className='carousel-text-body'>
+				// 	<div className='carousel-slogan'>Inspired Creative</div>
+				// 	<div className='carousel-quote'>"Creating innovative and beautiful spaces<br/> with quality craftsmanship"</div>
+				// </div>
 class ProductOffering extends Component{
 	render(){
 		return(
 			<div className='width100vw'>
-				<div className='offering-header'>Our Product Offerings</div>
+				<div className='offering-header' style={{zIndex:200}}>Our Product Offerings</div>
 				<div className='offering-body'>
 					<div className='each-offering-wrapper'>
 						<div className='each-offering col-md-4 col-sm-4 col-xs-6'>
@@ -97,15 +134,6 @@ class ProductOffering extends Component{
 	}
 }
 
-class Video extends Component{
-	render(){
-		return(
-			<div style={{width:'75%', margin:'auto'}}>
-				<video src={require('./test.mp4')} type='video/mp4' controls autoplay loop id="theVid" width='100%'/>
-			</div>
-		)
-	}
-}
 
 class SocialMedia extends Component{
 	render(){
@@ -120,17 +148,6 @@ class SocialMedia extends Component{
 }
 
 class RecentProjects extends Component{
-	render(){
-		return(
-			<div style={{height:300, textAlign:'center'}}>
-				<hr/>
-				<h1>Recent Projects</h1>
-			</div>
-		)
-	}
-}
-
-class Clients extends Component{
 	render(){
 		return(
 			<div style={{textAlign:'center'}}>
@@ -231,59 +248,15 @@ class Difference extends Component{
 	}
 }
 
-class ContactForm extends Component {
-	handleContact(event){
-		event.preventDefault();
-		$.ajax({
-			url: 'http://pauldkang.com:3001/send/email',
-			headers: {
-				'Content-Type':'application/x-www-form-urlencoded'
-			},
-			method: 'POST',
-			crossDomain: 'true',
-			dataType: 'json',
-			data: {'name': event.target[0].value,'email':event.target[1].value, 'message': event.target[2].value},
-			success: (data)=>{
-				hashHistory.push({pathname:'/',query:'1',state:{thanksSent:true}});
-				console.log(this)
-			}
-		}).fail(function(jqXhr) {
-			console.log('failed');
-		});
-	}
-
-	render() {
-		return (
-			<div className="qwqweqweqweqwe" style={{textAlign:'center'}}>
-
-				<div className="title">
-				</div>
-				<div className="someclassssss" style={{marginTop:150}}>
-					<h1>Send a message</h1>
-					<form onSubmit={this.handleContact}>
-						<input className="textbox" type="text" placeholder="Name"/><br/>
-						<input className="textbox" type="email" placeholder="Email" /><br/>
-						<textarea className="textarea" type="text-area" placeholder="Message"></textarea><br/>
-						<input className="submit-btn" type="submit" value="Submit"/>
-					</form>
-				</div>
-				
-			</div>
-		)
-	}
-}
-
 class Home extends Component{
 	render(){
     	return (
     		<div>
       			<HomeCarousel />
-      			<ProductOffering />
-      			<Video/>
+      			<WhatWeDo />
+      			<Philosophy/>
       			<SocialMedia/>
-      			<RecentProjects/>
       			<Clients/>
-      			
       			<ContactForm/>
       		
       		</div>
@@ -295,3 +268,9 @@ export default Home
 
 // <Specialty />
 // <Difference />
+
+    			// <section>
+    			// 	<Parallax className='parallax' speedDivider='5'>
+      	// 				<HomeCarousel />
+      	// 			</Parallax>
+      	// 		</section>

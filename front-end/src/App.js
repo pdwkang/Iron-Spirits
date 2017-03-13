@@ -29,12 +29,12 @@ class IronSpiritsNavBar extends React.Component {
                                 <NavItem href="/">
                                     <IndexLink to="gallery">Gallery</IndexLink>
                                 </NavItem>
-                                <NavItem href="/">
+                               {/* <NavItem href="/">
                                     <IndexLink to="onlineshop">Shop</IndexLink>
                                 </NavItem>                                                                
                                 <NavItem href="/">
                                     <IndexLink to="blog">Blog</IndexLink>
-                                </NavItem>                          
+                                </NavItem>                          */}
                                 <NavItem ref="/">
                                     <Link to="contact">Contact</Link>
                                 </NavItem>
@@ -46,17 +46,21 @@ class IronSpiritsNavBar extends React.Component {
                     <div className='navbar-inside-wrapper'>
                         <div className='each-nav-item'><Link activeClassName='active' to="about">About</Link></div>
                         <div className='each-nav-item'><Link activeClassName='active' to="services">Services</Link></div>
-                        <div className='each-nav-item'><Link activeClassName='active' to="process">Process</Link></div>
-                        <div className='each-nav-item'><Link activeClassName='active' to="gallery">Gallery</Link></div>                        
+
                         <div className='ironspirits-logo'>
                             <div className='logo-tilt'></div>
                             <IndexLink to="/"><img src={require('../public/logo.png')} alt=' '/></IndexLink>
                         </div>
+                        
+                        {/* <div className='each-nav-item'><Link activeClassName='active' to="process">Process</Link></div>*/}
 
-                        <div className='each-nav-item'><Link activeClassName='active' to="onlineshop">Shop</Link></div>
-                        <div className='each-nav-item'><Link activeClassName='active' to="blog">Blog</Link></div>
+                        <div className='each-nav-item'><Link activeClassName='active' to="gallery">Gallery</Link></div>                        
+
+
+                        {/* <div className='each-nav-item'><Link activeClassName='active' to="onlineshop">Shop</Link></div>
+                        <div className='each-nav-item'><Link activeClassName='active' to="blog">Blog</Link></div>*/}
                         <div className='each-nav-item'><Link activeClassName='active' to="contact">Contact</Link></div>
-                        <div className='each-nav-item' style={{color:'black'}}>Search</div>                        
+                        {/* <div className='each-nav-item' style={{color:'black'}}>Search</div> */}       
                     </div>
                 </div>   
             </div>             
