@@ -10,12 +10,23 @@ var clientLogos = [
 class Clients extends Component{
 	render(){
 		return(
-			<div style={{width:'80%', margin:'auto'}}>
-				<div className='section-header'>Brands We Worked With</div>
-				<div className='col-sm-4' style={{padding:20}}> <img src={clientLogos[0]} /> </div>
-				<div className='col-sm-4'> <img src={clientLogos[1]} /> </div>
-				<div className='col-sm-4'> <img src={clientLogos[2]} /> </div>
-				<div>&nbsp;</div>
+			<div className='client-wrapper'>
+				<div className='section-header5'>Brands We Worked With</div>
+				<div className='row' style={{width:'100%'}}>
+					<div style={{width:'80%', margin:'auto', marginTop:50}}>
+						<div>
+							<div className='col-sm-4'> <img className='client-img' src={clientLogos[0]} /> </div>
+							<div className='col-sm-4'> <img className='client-img' src={clientLogos[1]} /> </div>
+							<div className='col-sm-4'> <img className='client-img' src={clientLogos[2]} /> </div>
+						</div>
+						<div className='client-name'>
+							<div className='col-sm-4'>Mello Mushroom</div>
+							<div className='col-sm-4'>Michelin Tires</div>
+							<div className='col-sm-4'>North Point <br/>Community Church</div>
+						</div>
+					</div>
+				</div>
+				<div>&nbsp;</div><br/>
 			</div>
 		)
 	}

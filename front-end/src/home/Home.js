@@ -7,6 +7,7 @@ import WhatWeDo from './WhatWeDo.js'
 import Philosophy from './Philosophy.js'
 import Clients from './Clients.js'
 import ContactForm from './Contact.js'
+import SocialMedia from './SocialMedia.js'
 
 
 var Carousel = require('nuka-carousel');
@@ -134,18 +135,6 @@ class ProductOffering extends Component{
 	}
 }
 
-
-class SocialMedia extends Component{
-	render(){
-		return(
-			<div style={{textAlign:'center'}}>
-				<hr/>
-				<h1>social media links</h1>
-					<IronFooter />
-			</div>
-		)
-	}
-}
 
 class RecentProjects extends Component{
 	render(){
