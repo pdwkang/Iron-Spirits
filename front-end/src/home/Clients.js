@@ -11,13 +11,14 @@ class Clients extends Component{
 	render(){
 		return(
 			<div className='client-wrapper'>
-				<div className='section-header5'>Brands We Worked With</div>
+				<div className='section-header5'>BRANDS WE WORKED WITH</div>
+				<div className='section-header-bottom-line'></div>
 				<div className='row' style={{width:'100%'}}>
-					<div style={{width:'80%', margin:'auto', marginTop:50}}>
+					<div style={{width:'80%', margin:'auto', marginTop:100}}>
 						<div>
-							<div className='col-sm-4'> <img className='client-img' src={clientLogos[0]} /> </div>
-							<div className='col-sm-4'> <img className='client-img' src={clientLogos[1]} /> </div>
-							<div className='col-sm-4'> <img className='client-img' src={clientLogos[2]} /> </div>
+							<div className='col-sm-4'> <a target='_blank' href='http://mellowmushroom.com/'><img className='client-img' src={clientLogos[0]} /> </a></div>
+							<div className='col-sm-4'> <a href='http://www.michelinman.com/US/en/homepage.html' target="_blank"><img className='client-img' src={clientLogos[1]} /> </a></div>
+							<div className='col-sm-4'> <a href='http://northpoint.org/' target='_blank'><img className='client-img' src={clientLogos[2]} /> </a></div>
 						</div>
 						<div className='client-name'>
 							<div className='col-sm-4'>Mello Mushroom</div>

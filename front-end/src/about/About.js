@@ -1,53 +1,40 @@
 import React, { Component } from 'react'
-class AboutHeader extends Component{
+import OurTeam from './OurTeam.js'
+import Testimonials from './Testimonials.js'
+class AboutHeaderImage extends Component{
 	render(){
 		return(
-			<div className='width100vw about-header-wrapper'>
-				<div className='about-header'>
-					<div className='about-header-text'>
-						<strong>Ironspirits</strong> is an Atlanta, GA based design, production, and installation creative services firm founded in 2002 
-						by Eric Smith, an illustrator and designer for over 34 years.  Specializing in design and engineering, we serve 
-						churches and religious organizations, medical/dental facilities, restaurants/retail, corporations, museums, educational institutions and theater.  
-						We focus on producing themed and corporate identity spaces using: signage, props, sets, murals, custom fixtures, 2D/3D sculpture, illustration, 
-						digital media & interactive elements.<br/><br/>
-						Our highly specialized creative team produces exceptional environments and products with a high degree of finish. 
-						It is our team that continues to innovate, take risks and go beyond the cookie cutter template to create beautiful spaces.
-					</div>
-				</div>
+			<div className='about-header-image' style={{marginLeft:'15%',width:'70%'}}>
+				<img src={require('./images/aboutHeader.jpg')}/>
 			</div>
 		)
 	}
 }
 
-class OurTeam extends Component{
+class OurStory extends Component{
 	render(){
 		return(
-			<div style={{width:'80%',margin:'auto'}}>
-				<h1>Our Team</h1>
-				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
-				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
-				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
-				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
-				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
-				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
-				<div className='col-sm-3'><img src={require('./images/face.jpg')} alt='a'/><br/><h5>Title and Name</h5></div>
-				<div className='col-sm-3' style={{marginBottom:100}}><img src={require('./images/face.jpg')}/><br/><h5>Title and Name</h5></div>
-				<div>&nbsp;</div>
+			<div>
+			<div className='our-story-header'>Our Story</div>
+			<div className='our-story-text'>
+				Ironspirits is an Atlanta, GA based design, production, and installation creative services firm founded in 2002 by Eric Smith, an illustrator and designer for over 34 years.
+				<br/><br/>
+				Specializing in design and engineering, we serve churches and religious organizations, medical/dental facilities, restaurants/retail, corporations, museums, educational institutions and theater.
+				<br/><br/>
+We focus on producing themed and corporate identity spaces using: signage, props, sets, murals, custom fixtures, 2D/3D sculpture, illustration, digital media & interactive elements.
+<br/><br/>
+​Our highly specialized creative team produces exceptional environments and products with a high degree of finish.
+<br/><br/>
+It is our team that continues to innovate, take risks and go beyond the cookie cutter template to create beautiful spaces.
+			</div>
 			</div>
 		)
 	}
 }
 
-class Testimonials extends Component{
-	render(){
-		return(
-			<div style={{width:'80%',margin:'auto', height:300, marginBottom:100, backgroundColor:'blue', color:'white'}}>
-				<h1>Testimonials</h1>
-				
-			</div>
-		)
-	}
-}
+
+
+
 
 class FAQ extends Component{
 	render(){
@@ -136,8 +123,10 @@ class IronFooter extends Component{
 export default class About extends Component {
 	render(){
 		return(
-			<div style={{width:'100vw', textAlign:'center'}}>
-				<AboutHeader/>
+			<div>
+				<AboutHeaderImage/>
+				<OurStory/>
+
 				<OurTeam/>		
 				<Testimonials/>		
 				<FAQ/>		
@@ -147,4 +136,5 @@ export default class About extends Component {
 }
 
 // <AboutBody/>
+// <AboutHeader/>
 // <IronFooter/>

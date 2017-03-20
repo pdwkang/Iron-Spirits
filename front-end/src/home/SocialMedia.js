@@ -3,10 +3,11 @@ import { Parallax } from 'react-parallax';
 class SocialMedia extends Component{
 	render(){
 		return(
-			<div>
-			<div className='section-header3'>Connect With Us!</div>
+			<div style={{backgroundColor:'white'}}>
+			&nbsp;
 			<div style={{position:'relative'}} className='parallax-wrapper'>
 				<Parallax strength={500} bgImage={require('./images/parllax.jpeg')}>
+				<div className='section-header3'>CONNECT WITH US!</div>
 				<div className='row'>
 					
 					<div className='home-footer1'>

@@ -27,8 +27,10 @@ class ContactForm extends Component {
 	render() {
 		return (
 			<div className="contact-wrapper">
-				<div className='section-header4'>Contact Us!</div>
+				<div className='section-header4'>CONTACT US!</div>
+				<div className='section-header-bottom-line'></div>
 				<div className="contact-body col-sm-6">
+					<div className='contact-form-label'>Contact Form</div>
 					<form onSubmit={this.handleContact}>
 						<div className='name-wrapper'>
 							<div className='contact-form-left'>
@@ -52,11 +54,20 @@ class ContactForm extends Component {
 							</div>
 							<div className='contact-form-right1'>
 								<textarea className="textbox-message" type="text-area" rows='9' placeholder="Message"/>
-							</div>													
-							<div className='contact-submit'><input className="submit-btn" type="submit" value="Submit"/></div>	
+							</div>						
+							<div className='contact-hover'>							
+								<div className='contact-submit-left'></div>
+								<div className='contact-submit'><input className="submit-btn" type="submit" value="Send &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"/></div>	
+							</div>
 						</div>
 					</form>
 				</div>
+				<div style={{position:'absolute', left:'50%', height:352, width:'40%'}} >	
+					<div className='contact-form-label'>How To Find Us</div>
+					<MyGoogleMap/>
+				</div>
+				<a href='https://maps.google.com/maps?v=2&f=q&ie=UTF8&t=m&iwloc=&q=6020+Parkway+North+Drive%2c+Cumming%2c+GA%2c+United+States&z=13&source=embed'>
+				<div className='contact-info-box'>&nbsp;&nbsp;View Larger Map</div></a>
 			</div>
 		)
 	}

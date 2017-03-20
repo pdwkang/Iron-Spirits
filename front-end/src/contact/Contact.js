@@ -60,8 +60,10 @@ class Contact extends Component {
 							</div>
 						</form>
 					</div>
-				</div>			
-				<MyGoogleMap/>
+				</div>		
+				<div style={{marginLeft:'50vw',height:'50vw', width:'50vw'}} >	
+					<MyGoogleMap/>
+				</div>
 
 				
 				

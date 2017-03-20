@@ -63,7 +63,7 @@ $body-element-color: darkorange;
 	line-height: 60px;
 	background-color: white;
 	letter-spacing: -0.1px;
-	border-bottom: 2.5px solid rgba(0,0,0,0.1);
+	// border-bottom: 2.5px solid rgba(0,0,0,0.1);
 	font-family: 'Montserrat';
 	font-size: 14px;
 	font-weight: 400;	
@@ -104,7 +104,24 @@ $body-element-color: darkorange;
 		width:32%;
 		position: relative;
 		text-align: center;
-	
+		&:hover{
+			img{
+				transform:rotateY(360deg);
+				transition:transform 1s;
+				opacity: 0.8;
+			}
+		}
+		.ironspirits-letters{
+			z-index: 5;
+			position: absolute;
+			left:0;
+			right:0;
+			top:-35px;
+			font-size: 18px;
+			.iron-letters{
+				letter-spacing: 2px;
+			}
+		}
 		img{
 			position: absolute;
 			padding:10px;
@@ -113,9 +130,11 @@ $body-element-color: darkorange;
 			left:0;
 			right:0;
 			margin:auto;
-			top:-30px;
+			top:-35px;
 			border-radius: 50%;
+			// transform:rotate(45deg);
 			overflow: hidden;
+			
 		}
 		.logo-tilt{
 			width:70px;
@@ -127,8 +146,8 @@ $body-element-color: darkorange;
 			margin:auto;
 			bottom:-59px;
 			background-color: white;
-			border-bottom: 2.5px solid rgba(0,0,0,0.1);
-			border-right: 2.5px solid rgba(0,0,0,0.1);
+			// border-bottom: 2.5px solid rgba(0,0,0,0.1);
+			// border-right: 2.5px solid rgba(0,0,0,0.1);
 		}
 	}
 }

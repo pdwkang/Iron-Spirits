@@ -8,6 +8,7 @@ import Philosophy from './Philosophy.js'
 import Clients from './Clients.js'
 import ContactForm from './Contact.js'
 import SocialMedia from './SocialMedia.js'
+import RecentProjects from './RecentProjects.js'
 
 
 var Carousel = require('nuka-carousel');
@@ -28,12 +29,11 @@ class HomeCarousel extends Component{
 		window.dispatchEvent(new Event('resize'));	
 	}
 	render(){
-		var autoplay = true
 		return(
 			<div className='carousel-and-text'>
 				{/*<div style={{width: '80%', margin:'auto', marginTop: 20}}>*/}
 				<div style={{maxHeight:'40vw', overflow:'hidden'}}>
-				<Carousel autoplay={autoplay}>
+				<Carousel autoplay={true} wrapAround={true}>
 			        <div>
 			        	<img className='faded-carousel-image' onLoad={this.resize}  src={carouselImages[0]} alt=' '/>
 						<div className='each-carousel-text'>
@@ -136,23 +136,6 @@ class ProductOffering extends Component{
 }
 
 
-class RecentProjects extends Component{
-	render(){
-		return(
-			<div style={{textAlign:'center'}}>
-				<hr/>
-				<h1> Clients </h1>
-				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
-				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
-				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
-				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
-				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
-				<div className='col-sm-2'><img style={{width:'100%'}} src={require('./images/brand-logo.png')} alt='a'/></div>
-			</div>
-		)
-	}
-}
-
 class Specialty extends Component{
 	render(){
 		return(
@@ -246,6 +229,8 @@ class Home extends Component{
       			<Philosophy/>
       			<SocialMedia/>
       			<Clients/>
+      			
+      			
       			<ContactForm/>
       		
       		</div>
@@ -263,3 +248,5 @@ export default Home
       	// 				<HomeCarousel />
       	// 			</Parallax>
       	// 		</section>
+
+      	// <RecentProjects/>

@@ -48,8 +48,11 @@ class IronSpiritsNavBar extends React.Component {
                         <div className='each-nav-item'><Link activeClassName='active' to="services">Services</Link></div>
 
                         <div className='ironspirits-logo'>
-                            <div className='logo-tilt'></div>
-                            <IndexLink to="/"><img src={require('../public/logo.png')} alt=' '/></IndexLink>
+                            <IndexLink to="/">
+                                <div className='ironspirits-letters'>&nbsp;&nbsp;&nbsp;<span className='iron-letters'>IRON</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SPIRITS</div>
+                                <div className='logo-tilt'></div>
+                            <img src={require('../public/logo.png')} alt=' '/>
+                            </IndexLink>
                         </div>
                         
                         {/* <div className='each-nav-item'><Link activeClassName='active' to="process">Process</Link></div>*/}
@@ -68,13 +71,26 @@ class IronSpiritsNavBar extends React.Component {
     }
 };
 
+class Footer extends React.Component{
+    render(){
+        return(
+            <div style={{fontFamily:'Ubuntu', width:'100%', height:70, backgroundColor:'#162536',textAlign:'center',color:'white',paddingTop:25}}>
+                IRON SPIRITS COPYRIGHT © 2017.
+            </div>
+        )
+    }
+}
 //parent of all pages, the top navbar stays same and still on all pages
 class App extends React.Component{
     render(){
         return(
             <div>
                 <IronSpiritsNavBar />
+                
                 {this.props.children}       
+                <Footer/>
+                
+                
             </div>
         );
     }
